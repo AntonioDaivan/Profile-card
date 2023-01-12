@@ -1,0 +1,74 @@
+@use "variables"
+@use "mixins"
+
+header
+
+  .app-title
+    @include mixins.center
+    gap: .6rem
+    padding: 2rem 0
+
+    .app-title-icon
+      animation: rotate 5s linear infinite
+
+  .user-info
+    @include mixins.itemsCenter
+    flex-direction: column
+
+    .div-profile-image
+      height: 150px
+      width: 150px
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+      border-radius: 50%
+      border: 0.125rem solid variables.$primary
+
+      &:hover
+
+        &::before
+          content: ''
+          position: absolute
+          height: calc(100% + 5px)
+          width: calc(100% + 5px)
+          border: 2px solid variables.$primary
+          border-radius: 50%
+          animation: pulse .4s linear forwards
+
+      img
+        height: 100%
+        width: 100%
+
+    div
+      text-align: center
+
+      .user-name
+        color: variables.$primary
+        font-size: 1.5rem
+        margin-top: 1rem
+
+      .user-description
+        letter-spacing: .3rem
+        text-transform: uppercase
+
+@keyframes pulse
+  0%
+    transform: scale(.95)
+    opacity: 0
+
+  50%
+    transform: scale(1)
+    opacity: 1
+
+  100%
+    transform: scale(1.05)
+    opacity: 0
+
+@keyframes rotate
+  0%
+    // transform: rotate(0, 0, 0, 0deg)
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)

@@ -1,0 +1,25 @@
+@use "variables"
+@use "mixins"
+
+.section-techs
+
+  h2
+    @include mixins.subtitle
+
+  .tech-group
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    column-gap: .4rem
+    row-gap: .4rem
+    margin-top: 1rem
+
+    div
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+
+  &:hover
+    h2
+      color: variables.$primary
+      transition: all .2s ease

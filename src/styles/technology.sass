@@ -1,0 +1,11 @@
+@use "variables"
+@use "mixins"
+
+span
+  color: variables.$light
+  background: variables.$gray
+  padding: 5px
+  border-radius: 4px
+  @include mixins.itemsCenter
+  gap: .2rem
+  font-weight: 600
