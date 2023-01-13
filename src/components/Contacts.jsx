@@ -11,23 +11,23 @@ export function Contact() {
       </div>
       <div className="contact-group">
         <div>
-          <a href="https://wa.me/5571983012996" target="_blank">
-            <ImWhatsapp size={40} className="whatsapp" />
+          <a href="https://wa.me/5511957872839?text=" target="_blank">
+            <ImWhatsapp size={30} className="whatsapp" />
           </a>
         </div>
         <div>
-          <a href="https://www.instagram.com/herloncosta_/" target="_blank">
-            <SiInstagram size={40} className="instagram" />
+          <a href="https://www.instagram.com/antonio_daivan" target="_blank">
+            <SiInstagram size={30} className="instagram" />
           </a>
         </div>
         <div>
-          <a href="https://github.com/herloncosta" target="_blank">
-            <ImGithub size={40} className="github" />
+          <a href="https://github.com/antoniodaivan" target="_blank">
+            <ImGithub size={30} className="github" />
           </a>
         </div>
         <div>
-          <a href="https://www.linkedin.com/in/herloncosta/" target="_blank">
-            <SiLinkedin size={40} className="linkedin" />
+          <a href="https://www.linkedin.com/in/antoniodaivan/" target="_blank">
+            <SiLinkedin size={30} className="linkedin" />
           </a>
         </div>
       </div>

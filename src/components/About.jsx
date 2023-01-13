@@ -13,7 +13,7 @@ export function About() {
         estudar esse mundo que é o desenvolvimeto de sites, softwares e afins. Tenho
         estudado algumas tecnologias, dentre elas estão as citadas acima e continuo
         buscando me aperfeiçoar. Fico feliz qu tenha chegado até aqui. Abaixo estão
-        minhas redes para contato, estou sempre à disposição. Um abraço!
+        minhas redes para contato, estou sempre conectado. Abraço!
       </p>
     </section>
   );
