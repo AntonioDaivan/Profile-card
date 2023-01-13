@@ -8,12 +8,22 @@ header
     gap: .6rem
     padding: 2rem 0
 
+    &:hover
+      h1
+        color: variables.$white
+        transition: all .2s ease
+
     .app-title-icon
       animation: rotate 5s linear infinite
 
   .user-info
     @include mixins.itemsCenter
     flex-direction: column
+
+    &:hover
+      .user-description
+        color: variables.$white
+        transition: all .2s ease
 
     .div-profile-image
       height: 150px
@@ -46,6 +56,7 @@ header
       .user-name
         color: variables.$primary
         font-size: 1.5rem
+        font-weight: 600
         margin-top: 1rem
 
       .user-description
