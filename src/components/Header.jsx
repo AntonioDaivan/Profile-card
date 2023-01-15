@@ -8,7 +8,12 @@ export function Header() {
     <header>
       <div className="app-title">
         <h1>Dev Profile</h1>
-        <FaConnectdevelop className="app-title-icon" size={30} />
+        <div className="spinner-box">
+          <div className="orbit"></div>
+          <div className="orbit"></div>
+          <div className="orbit"></div>
+          <div className="orbit"></div>
+        </div>
       </div>
       <div className="user-info">
         <div className="div-profile-image">
