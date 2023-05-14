@@ -2,18 +2,60 @@
 @use "mixins"
 
 .section-about
+    &:hover
+        .about-title
+            label
+                h2
+                    color: #5eff00
+                    transition: .2s ease
 
-  h2
-    @include mixins.subtitle
+    .about-title
+        input
+          display: none
 
-  p
-    color: #ddd
-    text-align: justify
-    letter-spacing: 1px
-    line-height: 1.2rem
-    margin-top: 1rem
+        label
+          @include mixins.center
+          justify-content: space-between
+          cursor: pointer
 
-  &:hover
-    h2
-      color: variables.$primary
-      transition: all .2s ease
+        h2
+            @include mixins.subtitle
+            margin-top: 0
+
+        &:has(input[type="checkbox"])
+            .arrow-up
+                display: none
+
+            & ~ p
+                height: 0
+                overflow: hidden
+                transition: .3s ease
+                text-align: justify
+
+        &:has(input[type="checkbox"]:checked)
+            .arrow-down
+                display: none
+
+            .arrow-up
+                display: block
+
+            & ~ p
+                padding: 1rem 0
+                height: 160px
+
+                @media (max-width: 620px)
+                    height: 230px
+
+                @media (max-width: 475px)
+                    height: 290px
+
+                @media (max-width: 370px)
+                    height: 360px
+
+                @media (max-width: 370px)
+                    height: 390px
+
+                @media (max-width: 300px)
+                    height: 500px
+
+    .about-content

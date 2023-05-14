@@ -21,7 +21,7 @@ export function Header() {
         </div>
         <div>
           <h1 className="user-name">Antonio Daivan</h1>
-          <p className="user-description">Web Developer</p>
+          <p className="user-description">FRONTEND DEVELOPER</p>
         </div>
       </div>
     </header>

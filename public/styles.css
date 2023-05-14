@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: rgb(172, 172, 172);
+}
+
+.title input {
+    display: none;
+}
+
+.title label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.techs span {
+    padding: 4px 8px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+.title:has(input[type='checkbox']) ~ div {
+    height: 0;
+    overflow: hidden;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-around;
+    transition: height 200ms ease;
+}
+
+.title:has(input[type='checkbox']:checked) ~ div {
+    height: 40px;
+    padding: 8px 16px;
+}
+
+.title:has(input[type='checkbox']) .ph.ph-caret-up {
+    display: none;
+}
+
+.title:has(input[type='checkbox']:checked) .ph.ph-caret-down {
+    display: none;
+}
+
+.title:has(input[type='checkbox']:checked) .ph.ph-caret-up {
+    display: block;
+}
