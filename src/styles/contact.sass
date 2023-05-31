@@ -2,37 +2,38 @@
 @use "mixins"
 
 .section-contact
-  padding-bottom: 2rem
+    display: grid
+    row-gap: 1.5rem
 
-  h2
-    @include mixins.subtitle
-
-  .contact-group
-    @include mixins.center
-    gap: 2rem
-    margin-top: 2rem
-    flex-wrap: wrap
-
-    .whatsapp, .github, .instagram, .linkedin
-      color: variables.$gray
-      transition: all .5s ease
-
-      &:hover
-        transform: scale(1.1)
-
-    .whatsapp:hover
-      color: variables.$whatsapp
-
-    .instagram:hover
-      color: variables.$instagram
-
-    .github:hover
-      color: variables.$github
-
-    .linkedin:hover
-      color: variables.$linkedin
-
-  &:hover
     h2
-      color: variables.$primary
-      transition: all .2s ease
+        @include mixins.subtitle
+        margin: 0
+
+    .contact-group
+        @include mixins.center
+        gap: 2rem
+        flex-wrap: wrap
+
+        .whatsapp, .github, .instagram, .linkedin
+            color: variables.$gray
+            transition: all .2s ease
+
+            &:hover
+                transform: scale(1.1)
+
+        .whatsapp:hover
+            color: variables.$whatsapp
+
+        .instagram:hover
+            color: variables.$instagram
+
+        .github:hover
+            color: variables.$github
+
+        .linkedin:hover
+            color: variables.$linkedin
+
+    &:hover
+        h2
+            color: variables.$primary
+            transition: all .2s ease

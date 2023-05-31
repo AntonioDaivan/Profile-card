@@ -1,10 +1,14 @@
 @use "variables"
 
 .section-footer
-  p
+    position: relative
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
     text-align: center
-    padding: 1rem 0
+    padding: 1.5rem 0 1rem
+
     a
-      color: variables.$primary
-      text-decoration: none
-      transition: color 500ms ease
+        color: variables.$primary
+        text-decoration: none
+        transition: color 500ms ease

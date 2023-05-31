@@ -2,89 +2,87 @@
 @use "mixins"
 
 header
+    .app-title
+        @include mixins.center
+        gap: .6rem
+        padding: 2rem 0
 
-  .app-title
-    @include mixins.center
-    gap: .6rem
-    padding: 2rem 0
+        &:hover
+            color: variables.$white
+            transition: all .2s ease
 
-    &:hover
-      h1
-        color: variables.$white
-        transition: all .2s ease
+        .spinner-box
+            width: 50px
+            height: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            background-color: transparent
 
-    .spinner-box
-      width: 50px
-      height: 50px
-      display: flex
-      align-items: center
-      justify-content: center
-      background-color: transparent
+        .orbit
+            width: 1.875rem
+            height: 2.5rem
+            position: absolute
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 50%
+            border: 2px solid variables.$primary
+            animation: spin3D 3s linear infinite
 
-      .orbit
-        width: 1.875rem
-        height: 2.5rem
-        position: absolute
-        display: flex
-        justify-content: center
-        align-items: center
-        border-radius: 50%
-        border: 2px solid variables.$primary
-        animation: spin3D 3s linear infinite
+            &:nth-child(2)
+                animation-delay: 1s
+                animation-duration: 2s
 
-        &:nth-child(2)
-          animation-delay: 1s
-          animation-duration: 2s
+            &:nth-child(3)
+                animation-delay: 2s
 
-        &:nth-child(3)
-          animation-delay: 2s
+            &:nth-child(4)
+                animation-delay: 2.5s
 
-  .user-info
-    @include mixins.itemsCenter
-    flex-direction: column
+    .user-info
+        @include mixins.itemsCenter
+        flex-direction: column
+        gap: 1rem
 
-    &:hover
-      .user-description
-        color: variables.$white
-        transition: all .2s ease
+        &:hover
+            .user-description
+                color: variables.$white
+                transition: all .2s ease
 
-    .div-profile-image
-      height: 150px
-      width: 150px
-      display: flex
-      align-items: center
-      justify-content: center
-      position: relative
-      border-radius: 50%
-      border: 0.125rem solid variables.$primary
+        .div-profile-image
+            height: 150px
+            width: 150px
+            display: flex
+            align-items: center
+            justify-content: center
+            position: relative
+            border-radius: 50%
+            border: 0.125rem solid variables.$primary
 
-      &:hover
+            &:hover
+                &::before
+                    content: ''
+                    position: absolute
+                    height: calc(100% + 5px)
+                    width: calc(100% + 5px)
+                    border: 2px solid variables.$primary
+                    border-radius: 50%
+                    animation: pulse .4s linear forwards
 
-        &::before
-          content: ''
-          position: absolute
-          height: calc(100% + 5px)
-          width: calc(100% + 5px)
-          border: 2px solid variables.$primary
-          border-radius: 50%
-          animation: pulse .4s linear forwards
+            img
+                height: 100%
+                width: 100%
 
-      img
-        height: 100%
-        width: 100%
+        .user-name
+            color: variables.$primary
+            font-size: 1.5rem
+            font-weight: 600
+            text-align: center
 
-    div
-      text-align: center
-
-      .user-name
-        color: variables.$primary
-        font-size: 1.5rem
-        font-weight: 600
-        margin-top: 1rem
-
-      .user-description
-        letter-spacing: .3rem
-        text-transform: uppercase
+        .user-description
+            letter-spacing: .3rem
+            text-transform: uppercase
 
 @keyframes pulse
   0%
