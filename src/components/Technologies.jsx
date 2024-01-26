@@ -1,5 +1,5 @@
 import { Technology } from './Technology';
-import { DiCss3, DiHtml5, DiSass, DiNodejsSmall, DiReact, DiGithubBadge, DiLinux, DiGit } from 'react-icons/di';
+import { DiCss3, DiHtml5, DiSass, DiNodejsSmall, DiReact, DiGithubBadge, DiLinux, DiGit, DiMongodb } from 'react-icons/di';
 import { SiJavascript, SiBootstrap, SiTailwindcss } from 'react-icons/si';
 import { VscChevronDown, VscChevronUp } from 'react-icons/vsc';
 
@@ -29,6 +29,7 @@ export function Techs() {
                 <Technology name="Git" bg="#E94D30" icon={<DiGit />} />
                 <Technology name="GitHub" bg="#1A1D22" icon={<DiGithubBadge />} />
                 <Technology name="Linux" bg="#1A1D22" icon={<DiLinux />} />
+                <Technology name="MongoDb" text="#000" bg="#3C823B" icon={<DiMongodb />} />
             </div>
         </section>
     );
